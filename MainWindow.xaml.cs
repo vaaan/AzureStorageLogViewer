@@ -39,6 +39,7 @@ namespace StorageLogViewer
             openFileDialog.ShowDialog();
             var lines = File.ReadAllLines(openFileDialog.FileName);
             var logEntries = GetLogEntries(lines);
+            xdg.ItemsSource = null;
             xdg.ItemsSource = logEntries;
         }
 
